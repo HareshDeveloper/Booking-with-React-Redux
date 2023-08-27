@@ -1,0 +1,15 @@
+.background{
+   position: fixed;
+    background-image: linear-gradient(to right ,#2193b0,#6dd5ed);
+    z-index: -1;
+};
+.id{
+     margin-bottom: 10%;
+}
+.submitButton{
+     margin-top: 40px !important;
+     width: 156px;
+     height: 46px;
+     font-size: 22px !important;
+     margin-left: 338px !important;
+}
