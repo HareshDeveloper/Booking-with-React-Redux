@@ -1,3 +1,4 @@
+import { act } from "react-dom/test-utils";
 import { combineReducers } from "redux";
 // const initialData = {
 //   id: "",
@@ -33,6 +34,30 @@ const bookingReducer = (state = allBookingData, action) => {
           }
         ]
       };
+      case "updateCredential":
+  const updatedBooking = {
+    id: action.payload.id,
+    amount: action.payload.amount,
+    username: action.payload.userName,
+    dateOfActivity: action.payload.dateOfActivity,
+    bookingDate: action.payload.bookingDate,
+  };
+  return {
+    ...state,
+    bookings: [
+      ...state.bookings.slice(0, action.payload.id), 
+      updatedBooking, 
+      ...state.bookings.slice(action.payload.id + 1), 
+    ],
+  };
+      case"deleteBooking":
+      console.log("Red",action.payload);
+      return{ ...state,
+        bookings: [
+          ...state.bookings.slice(0, action.payload), 
+          ...state.bookings.slice(action.payload + 1), 
+        ],
+      }
     default:
       return state;
   }

@@ -1,3 +1,12 @@
 .tableBody{
     font-size: larger;
 }
+.searchBarContainer{
+    margin-top: 16px;
+    margin-left: 35%;
+    margin-right: 10%;
+}
+.content{
+    padding-left: 15%;
+    padding-right: 15%;
+}

@@ -32,10 +32,10 @@ const SignUpData = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
-  const [lastName,setLastName]=useState('');
+  const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const handleSignUp = () => {
-    dispatch(signUp(email,firstName,password,lastName));
+    dispatch(signUp(email, firstName, password, lastName));
   };
 
   return (
@@ -75,7 +75,7 @@ const SignUpData = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
-            style={{marginBottom:'15px'}}
+              style={{ marginBottom: "15px" }}
               label="Password (6 or more characters)"
               placeholder="Enter your Password"
               variant="filled"

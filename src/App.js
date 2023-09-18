@@ -7,6 +7,7 @@ import SignUpWithBackground from "./Components/SignUp/SignUp";
 import "./App.css";
 import Booking from "./Components/BookingPage/Booking";
 import BookedData from "./Components/BookedData/BookedData";
+import UpdateBooking from "./Components/BookingPage/Update";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signUp" element={<SignUpWithBackground />} />
           <Route path="/booking" element={<Booking />}></Route>
           <Route path="/bookedData" element={<BookedData/>}></Route>
+          <Route path="/updateBooking/:id" element={<UpdateBooking/>}></Route>
         </Routes>
       </div>
     </BrowserRouter>

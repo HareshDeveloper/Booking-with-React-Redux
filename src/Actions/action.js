@@ -14,3 +14,19 @@ export const credential = (credentials) => {
     payload: credentials,
   };
 };
+
+export const updateCredential = (credentials) => {
+  console.log('action',credentials);
+  return {
+    type: "updateCredential",
+    payload: credentials,
+  };
+};
+
+export const deleteBooking = (num) => {
+  console.log('delete',num);
+  return {
+    type: "deleteBooking",
+    payload: num,
+  };
+};
